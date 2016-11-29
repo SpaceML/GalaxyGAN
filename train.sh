@@ -51,4 +51,4 @@ echo $matlabcommand
 matlab -nosplash -nodesktop -r $matlabcommand
 
 cd pix2pix
-DATA_ROOT=../$base_dir/$name name=$name  which_direction=BtoA display=0 niter=20 batchSize=1 gpu=$user_gpu save_latest_freq=2000 heckpoints_dir=../$model_dir th train.lua
+DATA_ROOT=../$base_dir/$name name=$name  which_direction=BtoA display=0 niter=20 batchSize=1 gpu=$user_gpu save_latest_freq=2000 checkpoints_dir=../$model_dir th train.lua
