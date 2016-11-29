@@ -1,4 +1,4 @@
-function train(fwhm,sig,input_folder,figure_folder,mode) 
+function roou(fwhm,sig,input_folder,figure_folder,mode) 
 %fwhm: Full width at Half Maximum in arc seconds for gaussian filter
 %sig: White Noise level
 %mode: 0:training 1:testing    
