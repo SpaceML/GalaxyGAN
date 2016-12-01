@@ -50,7 +50,6 @@ figure_dir="$base_dir/$name"
 
 matlabcommand="roou("$fwhm","$sig",'"$input_dir"','"$figure_dir"',1);quit"
 
-#echo $matlabcommand
 matlab -nosplash -nodesktop -r $matlabcommand
 
 cd pix2pix
