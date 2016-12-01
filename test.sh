@@ -45,7 +45,7 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-
+$name=$fwhm_$sig
 figure_dir="$base_dir/$name"
 
 matlabcommand="roou("$fwhm","$sig",'"$input_dir"','"$figure_dir"',1);quit"
@@ -53,7 +53,7 @@ matlabcommand="roou("$fwhm","$sig",'"$input_dir"','"$figure_dir"',1);quit"
 matlab -nosplash -nodesktop -r $matlabcommand
 
 cd pix2pix
-DATA_ROOT=../$base_dir/$name name=$name which_direction=BtoA phase=test display=0 gpu=$user_gpu checkpoints_dir=../$model_dir results_dir=../$result_dir th test.lua
+DATA_ROOT=../$base_dir/$fwhm_$sig name=$name which_direction=BtoA phase=test display=0 gpu=$user_gpu checkpoints_dir=../$model_dir results_dir=../$result_dir th test.lua
 
 cd ../$result_dir/$name/latest_net_G_test/
 mkdir images/deconv
