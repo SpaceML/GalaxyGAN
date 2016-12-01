@@ -42,7 +42,7 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-name = $fwhm_$sig
+name=$fwhm_$sig
 figure_dir="$base_dir/$name"
 
 matlabcommand="roou("$fwhm","$sig",'"$input_dir"','"$figure_dir"',0);quit"
