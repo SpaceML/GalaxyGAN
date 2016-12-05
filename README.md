@@ -14,9 +14,10 @@ AMI Id: ami-bffec6a8. (Can be launched using p2.xlarge instance in GPU compute c
 #Connect to Amazon EC2 Machine
 Please follow the instruction of Amazon EC2.
 #Activate Matlab
+* follow the instruction on `http://www.mathworks.com/matlabcentral/answers/100407-how-do-i-transfer-a-concurrent-or-network-named-user-matlab-license-to-a-new-server` to generate a matlab license for the EC2 instance.
 * put your license file `license.lic` in `~/`
 * run script 
-	`bash activate_matlab.sh /usr/local/MATLAB/R2016b/bin/activate_matlab.sh -propertiesFile /home/ubuntu/activate.txt` to active matlab
+	`bash /usr/local/MATLAB/R2016b/bin/activate_matlab.sh -propertiesFile /home/ubuntu/activate.txt` to active matlab
 
 #Get Our Code
 	git clone --recursive https://github.com/DS3Lab/roou.git
