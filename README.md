@@ -29,10 +29,10 @@ Please execute the following three commands and you will get the result that we 
 This will run the trainning on all FITS files in `~/fits_train`.
 
 	bash test.sh -input ~/fits_test -fwhm 1.4 -sigma 1.2 -figure figures -gpu 1 -output result -model models -mode full
-This will run the testing on all FITS files in `~/fits_test` and you can see the ground truth in `result/1.4_1.2/latest_net_G_test/index.html`.
+This will run the testing on all FITS files in `~/fits_test` and you can see the results in `result/1.4_1.2/latest_net_G_test/index.html`.
 
 	bash test.sh -input ~/fits_test -fwhm 1.4 -sigma 1.2 -figure figures -gpu 1 -output result -model models -mode blank
-This will run the testing on all FITS files in `~/fits_test`, just the groundtruth is made blank to make sure the model doesn't use the information of groundtruth image we provide. In the `figures/test/` you can see the groundtruth are left blank and you can still get the same output in `result/1.4_1.2/latest_net_G_test/index.html` as the previous command.
+This will run the testing on all FITS files in `~/fits_test`, just the groundtruth is made blank to make sure the testing doesn't use the information of groundtruth image that we provide. In the `figures/test/` you can see the groundtruth are left blank and you can still get the same output in `result/1.4_1.2/latest_net_G_test/index.html` as the previous command.
 	
 
 You can vary the parameters after `-fwhm` and `-sigma` to change the variance of gaussian filter and white noise level to the number you want.
