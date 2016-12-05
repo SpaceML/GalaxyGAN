@@ -25,13 +25,9 @@ function roou(fwhm,sig,input_folder,figure_folder,mode)
     end
     train_folder = sprintf('%s/train',figure_folder);
     test_folder = sprintf('%s/test',figure_folder);
-    test_noori_folder = sprintf('%s/test_no_original',figure_folder);
     deconv_folder = sprintf('%s/deconv',figure_folder);
     if ~exist(train_folder, 'dir')
         mkdir(train_folder);
-    end
-    if ~exist(test_noori_folder, 'dir')
-        mkdir(test_noori_folder);
     end
     if ~exist(test_folder, 'dir')
         mkdir(test_folder);
