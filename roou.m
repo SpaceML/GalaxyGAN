@@ -161,14 +161,16 @@ function roou(fwhm,sig,input_folder,figure_folder,mode)
         else
             jpg_path = sprintf('%s/train/%s.jpg',figure_folder,filename);
         end
-        imwrite(figure_combined,jpg_path);
+        if mode == 2
+            figure_combined_no_ori = zeros(size(data_g,1),size(data_g,2)*2,3);
+            figure_combined_no_ori(:,size(data_g,2)+1:2*size(data_g,2),:) = figure_blurred(:,:,:);
+            imwrite(figure_combined_no_ori,jpg_path);
+        else
+            imwrite(figure_combined,jpg_path);
+        end
         if mode
             deconv_path = sprintf('%s/deconv/%s.jpg',figure_folder,filename);
             imwrite(figure_deconv,deconv_path);
-            figure_combined_no_ori = zeros(size(data_g,1),size(data_g,2)*2,3);
-            figure_combined_no_ori(:,size(data_g,2)+1:2*size(data_g,2),:) = figure_blurred(:,:,:);
-            no_ori_path = sprintf('%s/test_no_original/%s.jpg',figure_folder,filename);
-            imwrite(figure_combined_no_ori,no_ori_path);
         end
     end
 end
