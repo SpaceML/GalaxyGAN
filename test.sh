@@ -50,7 +50,7 @@ while [ "$1" != "" ]; do
 done
 name=$fwhm"_"$sig
 figure_dir="$base_dir/$name"
-if [ "$mode"==full ]; then
+if [ "$mode" = full ]; then
     matlabcommand="roou("$fwhm","$sig",'"$input_dir"','"$figure_dir"',1);quit"
 else
     matlabcommand="roou("$fwhm","$sig",'"$input_dir"','"$figure_dir"',2);quit"
