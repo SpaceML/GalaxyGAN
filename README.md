@@ -8,11 +8,14 @@ We provide an EC2 AMI with the following pre-installed packages:
 
 as well as the FITS file we used in the paper(saved in ~/fits_train and ~/fits_test)
 
-AMI Id: ami-bffec6a8. (Can be launched using p2.xlarge instance in GPU compute catagory)
+AMI Id: ami-6f48b379
+. (Can be launched using p2.xlarge instance in GPU compute catagory)
 
-[Launch](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-bffec6a8) an instance.
+[Launch](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-6f48b379) an instance.
 #Connect to Amazon EC2 Machine
 Please follow the instruction of Amazon EC2.
+
+note: If you get error like "nvidia-uvm 4.4.0-62 generic" was missing, this is because Amazon updated the kernal of the Ubuntu system, please re-install the cuda again.
 #Activate Matlab
 * follow the instructions on [mathworks website](http://www.mathworks.com/matlabcentral/answers/100407-how-do-i-transfer-a-concurrent-or-network-named-user-matlab-license-to-a-new-server) to generate a matlab license for the EC2 instance.
 * put your license file `license.lic` in `~/` of the EC2 instance you created
