@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Gallery">
+    <meta name="author" content="gokul">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Gallery</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="css/html5demos.css" rel="stylesheet">
+    <link href="css/blueimp-gallery.min.css" rel="stylesheet">
+    <style>
+        .navbar .navbar-left {
+            margin-left: 30px;
+        }
+
+        .navbar .navbar-right {
+            margin-right: 30px;
+        }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <li><a href="index.php">GalaxyNet</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<div id="links" class="links">
+    <a href="images/g1a.jpg" title="Galaxy 1">
+        <img src="images/g1.jpg" alt="Galaxy 1" height='300' width='300'>
+    </a>
+
+    <a href="images/g2a.jpg" title="Galaxy 2">
+        <img src="images/g2.jpg" alt="Galaxy 2" height='300' width='300'>
+    </a>
+
+    <a href="images/g3a.jpg" title="Galaxy 3">
+        <img src="images/g3.jpg" alt="Galaxy 3" height='300' width='300'>
+    </a>
+
+    <a href="images/g4a.jpg" title="Galaxy 4">
+        <img src="images/g4.jpg" alt="Galaxy 4" height='300' width='300'>
+    </a>
+
+    <a href="images/g5a.jpg" title="Galaxy 5">
+        <img src="images/g5.jpg" alt="Galaxy 5" height='300' width='300'>
+    </a>
+
+    <a href="images/g6a.jpg" title="Galaxy 6">
+        <img src="images/g6.jpg" alt="Galaxy 6" height='300' width='300'>
+    </a>
+
+    <a href="images/g7a.jpg" title="Galaxy 7">
+        <img src="images/g7.jpg" alt="Galaxy 7" height='300' width='300'>
+    </a>
+
+    <a href="images/g8a.jpg" title="Galaxy 8">
+        <img src="images/g8.jpg" alt="Galaxy 8" height='300' width='300'>
+    </a>
+
+    <a href="images/g9a.jpg" title="Galaxy 9">
+        <img src="images/g9.jpg" alt="Galaxy 9" height='300' width='300'>
+    </a>
+
+</div>
+
+<script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
+
+<section id="wrapper">
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted"><a href = "about.html">About </a> | <a href = "mailto: sgokula@ethz.ch"> Contact </a></p>
+      </div>
+    </footer>
+</section>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/blueimp-gallery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

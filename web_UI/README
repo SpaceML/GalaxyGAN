@@ -1,0 +1,21 @@
+Code for the web frontend.
+
+Requirements:
+1. LAMP Stack installed on both the webserver and the GPU machine
+2. PHP-cURL installed on both machines
+3. CUDA, cuDNN installed on the GPU Machine
+4. Torch installed in GPU Machine at /usr/local (chmod 777 so that everyone can access)
+
+Other instructions
+1. Change the upload_max_filesize in php.ini (usually at /etc/php5/apache2/php.ini) to 20M
+
+
+Interface flow:
+1. user uploads the file in webserver/index.php via drag-n-drop or interface and presses "Deredshift button"
+2. index.php sends a POST request to webserver/upload.php with the uploaded image
+3. upload.php stores the file on disk and sends it to the gpu machine via cURL, error raised if cURL is not installed.
+4. gpu_machine/process.php gets the images, stores it on disk, calls torch with the necessary arguments and sends back the result to webserver/upload.php.
+5. upload.php stores the processed image on disk and sends the name of the file back to index.php
+6. index.php now calls webserver/results.php with the filename
+7. results.php displays the original and processed image with an option to try another image.
+
