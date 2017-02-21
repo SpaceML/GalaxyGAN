@@ -1,6 +1,7 @@
 # GalaxyGAN_python
 
-author: Yiru Chen 
+Author: Yiru Chen 
+
 Source: https://github.com/Ireneruru/GalaxyGAN_python/tree/master
 
 This project is the implementation of the Paper "Generative Adversarial Networks recover features in astrophysical images of galaxies beyond the deconvolution limit" on python.
