@@ -1,4 +1,4 @@
-#Running it On AWS
+# Running it On AWS
 
 ## EC2 Public AMI
 We provide an EC2 AMI with the following pre-installed packages:
@@ -14,7 +14,7 @@ AMI Id: ami-6f48b379
 . (Can be launched using p2.xlarge instance in GPU compute catagory)
 
 [Launch](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-6f48b379) an instance.
-### Connect to Amazon EC2 Machine
+## Connect to Amazon EC2 Machine
 Please follow the instruction of Amazon EC2.
 
 note: If you get error like "nvidia-uvm 4.4.0-62 generic" was missing, this is because Amazon updated the kernal of the Ubuntu system, please re-install the cuda again.
@@ -44,7 +44,7 @@ You can vary the parameters after `-fwhm` and `-sigma` to change the variance of
 
 It will take about 5 hours to train the model on an Amazon EC2 p2.xlarge instance. 
 
-#Running It locally
+# Running It locally
 ## Get Our Code
 	git clone --recursive https://github.com/SpaceML/GalaxyGAN.git
 	cd GalaxyGAN
