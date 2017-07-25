@@ -63,6 +63,8 @@ Install torch packages `nngraph`, `threads` and `display`
 	
 Install matlab
 
+Install imagemagick
+
 ## Get Our Code
 	git clone --recursive https://github.com/SpaceML/GalaxyGAN.git
 	cd GalaxyGAN
