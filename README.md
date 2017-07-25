@@ -1,5 +1,6 @@
-##Running it On AWS
-### EC2 Public AMI
+#Running it On AWS
+
+## EC2 Public AMI
 We provide an EC2 AMI with the following pre-installed packages:
 
 * CUDA
@@ -17,15 +18,15 @@ AMI Id: ami-6f48b379
 Please follow the instruction of Amazon EC2.
 
 note: If you get error like "nvidia-uvm 4.4.0-62 generic" was missing, this is because Amazon updated the kernal of the Ubuntu system, please re-install the cuda again.
-### Activate Matlab
+## Activate Matlab
 * follow the instructions on [mathworks website](http://www.mathworks.com/matlabcentral/answers/100407-how-do-i-transfer-a-concurrent-or-network-named-user-matlab-license-to-a-new-server) to generate a matlab license for the EC2 instance.
 * put your license file `license.lic` in `~/` of the EC2 instance you created
 * run script 
 	`bash /usr/local/MATLAB/R2016b/bin/activate_matlab.sh -propertiesFile /home/ubuntu/activate.txt` to active matlab
 
-### Get Our Code
+## Get Our Code
 	git clone --recursive https://github.com/SpaceML/GalaxyGAN.git
-### Run Our Code
+## Run Our Code
 Please execute the following three commands and you will get the result that we got in our paper.
 	
 	cd GalaxyGAN
@@ -43,16 +44,16 @@ You can vary the parameters after `-fwhm` and `-sigma` to change the variance of
 
 It will take about 5 hours to train the model on an Amazon EC2 p2.xlarge instance. 
 
-##Running It locally
-### Get Our Code
+#Running It locally
+## Get Our Code
 	git clone --recursive https://github.com/SpaceML/GalaxyGAN.git
 	cd GalaxyGAN
 
-### Get and Unzip Our Fits Files
+## Get and Unzip Our Fits Files
 The data to download is about 5GB, after unzipping it will become about 16GB.
 
 	bash download.sh 
-### Run Our Code
+## Run Our Code
 Please execute the following three commands and you will get the result that we got in our paper.
 	
 	bash train.sh -input fitsdata/fits_train -fwhm 1.4 -sigma 1.2 -figure figures -gpu 1 -model models
