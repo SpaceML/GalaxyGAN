@@ -45,6 +45,24 @@ You can vary the parameters after `-fwhm` and `-sigma` to change the variance of
 It will take about 5 hours to train the model on an Amazon EC2 p2.xlarge instance. 
 
 # Running It locally
+
+## Prerequisites
+
+Linux or OSX
+
+NVIDIA GPU + CUDA CuDNN (CPU mode and CUDA without CuDNN may work with minimal modification, but untested)
+
+## Dependencies
+Install torch and dependencies from https://github.com/torch/distro
+
+Install torch packages `nngraph`, `threads` and `display`
+
+	luarocks install nngraph
+	luarocks install threads
+	luarocks install https://raw.githubusercontent.com/szym/display/master/display-scm-0.rockspec
+	
+Install matlab
+
 ## Get Our Code
 	git clone --recursive https://github.com/SpaceML/GalaxyGAN.git
 	cd GalaxyGAN
